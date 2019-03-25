@@ -1,0 +1,30 @@
+---
+- name: Install pip
+  apt:
+    name: "{{ packages }}"
+    update_cache: yes
+  vars:
+    packages:
+      - python
+      - python-pip
+
+- name: Install certbot digitalocean DNS plugin
+  pip:
+    name: certbot-dns-digitalocean
+
+- name: Create DigitalOcean config dir
+  file:
+    state: directory
+    path: "{{ certbot_digitalocean_config_dir }}"
+    mode: 0700
+    owner: root
+    group: root
+
+- name: Write the DigitalOcean config
+  template:
+    src: do-api.ini.j2
+    dest: "{{ certbot_digitalocean_config_dir }}/do-api.ini"
+    owner: root
+    group: root
+    mode: 0400
+...

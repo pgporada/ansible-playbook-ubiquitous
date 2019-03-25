@@ -1,0 +1,5 @@
+---
+- openssl_dhparam:
+    path: /etc/ssl/certs/dhparam.pem
+    size: 4096
+...

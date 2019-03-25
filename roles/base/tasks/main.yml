@@ -1,0 +1,13 @@
+---
+- name: Install dependencies
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - dirmngr
+    - git
+    - curl
+    - unzip
+    - bzip2
+    - apt-transport-https
+...

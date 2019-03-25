@@ -1,0 +1,6 @@
+---
+- pgporada.unifi
+- pgporada.mongodb
+- geerlingguy.nginx
+- geerlingguy.certbot
+...
