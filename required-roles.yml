@@ -1,6 +1,10 @@
 ---
-- pgporada.unifi
-- pgporada.mongodb
-- geerlingguy.nginx
-- geerlingguy.certbot
+- name: pgporada.unifi
+  src: https://github.com/pgporada/ansible-role-mongodb
+- name: pgporada.mongodb
+  src: https://github.com/pgporada/ansible-role-mongodb
+- name: geerlingguy.nginx
+  src: https://github.com/geerlingguy/ansible-role-nginx
+- name: geerlingguy.certbot
+  src: https://github.com/geerlingguy/ansible-role-certbot
 ...
